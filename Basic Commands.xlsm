@@ -1,0 +1,44 @@
+
+'sub routine 1 - opening message'
+
+Sub auto_open()
+
+MsgBox "Welcome to Introduction to VBA!"
+
+End Sub
+
+'sub routine 2 - closing message'
+
+Sub auto_close()
+
+MsgBox "Bye, See you again!"
+
+End Sub
+
+'sub routine 3 - cellreferencing'
+
+Sub CellReferencing()
+
+ActiveCell.Value = "Game"
+[B1].Value = "Year"
+[C1].Value = "Genre"
+[D1].Value = "Publisher"
+[E1].Value = "Price"
+[F1].Value = "Author"
+[G1].Value = "Edition"
+
+End Sub
+
+'sub routine 4 - BoldItalic'
+
+Sub BoldItalic()
+
+'invoking a Range constructor'
+Dim myRange As Range
+Set myRange = Range("A1:I1")
+
+ActiveSheet.[A1:G1].Font.Bold = True 'syntax 1 - non dynamic - rigid'
+myRange.Font.Italic = True 'syntax 2 - dynamic - change to be made in constructor'
+
+
+End Sub
